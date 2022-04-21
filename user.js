@@ -11,7 +11,7 @@ class User{
         return this.name
     }
 
-    getSoreByMemory(){
+    getScoreByMemory(){
         return this.getSoreByMemory
     }
 
