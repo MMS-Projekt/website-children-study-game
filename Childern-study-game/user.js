@@ -10,4 +10,12 @@ class User{
     getName(){
         return this.name
     }
+
+    getSoreByMemory(){
+        return this.getSoreByMemory
+    }
+
+    getScoreByGS(){
+        return this.scoreByGS
+    }
 }
