@@ -32,3 +32,8 @@ window.setImageByUser = (image_url) => {
   console.log("set image by user" + image_url);
   window.image_url = image_url;
 };
+
+window.logout = () => {
+  window.user = null;
+  window.image_url = null;
+};
