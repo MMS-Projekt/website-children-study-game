@@ -30,4 +30,8 @@ export class User {
   setScoreByGS(newScore) {
     this.getScoreByGS = newScore;
   }
+
+  setImageUrl(image_url) {
+    this.image_url = image_url;
+  }
 }

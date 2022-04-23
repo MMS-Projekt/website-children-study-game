@@ -17,8 +17,9 @@
       crossorigin="anonymous"
     ></script>
     <!--add main js-->
-    <script type="module" src="/js/main.mjs"></script>
+    <script type="module" src="/js/userManager.mjs"></script>
     <script type="module" src="/js/user.mjs"></script>
+    <script type="module" src="/js/dbConfig.mjs"></script>
     <title>Registration</title>
   </head>
   <body>
@@ -68,11 +69,11 @@
       <dev class="row">
         <p>
           <label>Choose foto for your acount</label>
-          <img src="..." alt="No foto" class="img-circle"> 
-          <img src="..." alt="No foto" class="img-circle">
-          <img src="..." alt="No foto" class="img-circle">
-          <img src="..." alt="No foto" class="img-circle">
-          <img src="..." alt="No foto" class="img-circle">
+          <img src="/html/imageHTML/CSG.png" alt="No foto" class="img-circle" onclick="setImageByUser(this.src)"> 
+          <img src="..." alt="No foto" class="img-circle" onclick="setImageByUser(this.src)">
+          <img src="..." alt="No foto" class="img-circle" onclick="setImageByUser(this.src)">
+          <img src="..." alt="No foto" class="img-circle" onclick="setImageByUser(this.src)">
+          <img src="..." alt="No foto" class="img-circle" onclick="setImageByUser(this.src)">
         </p>
       </dev>
       <div class="row">

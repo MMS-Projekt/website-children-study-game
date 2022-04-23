@@ -2,7 +2,7 @@ import { User } from "./user.mjs";
 
 //Global variables
 window.user;
-window.db;
+window.image_url = "";
 
 // Functions
 /**
@@ -10,9 +10,9 @@ window.db;
  */
 window.createUser = () => {
   const name = document.getElementById("tfUserName").value;
-  const foto_url = ""; // have to get url of foto
-  console.log(name);
-  window.user = new User(name, foto_url);
+  window.user = new User(name, window.image_url);
+  window.image_url = "";
+  // in window.db save user
   console.log(window.user);
 };
 
@@ -21,14 +21,14 @@ window.createUser = () => {
  */
 window.findUser = () => {
   const name = document.getElementById("tfUserName").value;
-  //user = find in DB
+  //user = find in window.db
   console.log("findUser " + name);
 };
 
 /**
- * create conncetion with database
+ * sets image by user
  */
-window.conncetionDB = () => {
-  // window.db = new Database()...
-  console.log("Hier shoud be connection with DB");
+window.setImageByUser = (image_url) => {
+  console.log("set image by user" + image_url);
+  window.image_url = image_url;
 };
