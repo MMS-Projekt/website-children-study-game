@@ -13,7 +13,7 @@ window.createUser = () => {
   window.user = new User(name, window.image_url);
   window.image_url = "";
   // in window.db save user
-  console.log(window.user);
+  window.location.href = "choice_of_games.html";
 };
 
 /**
@@ -22,7 +22,7 @@ window.createUser = () => {
 window.findUser = () => {
   const name = document.getElementById("tfUserName").value;
   //user = find in window.db
-  console.log("findUser " + name);
+  window.location.href = "choice_of_games.html";
 };
 
 /**
