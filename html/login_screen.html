@@ -17,6 +17,9 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <!--add main js-->
+    <script type = "module" src="/js/main.mjs"></script>
+    <script type = "module" src="/js/user.mjs"></script>
     <title>Login screen</title>
   </head>
   <body>
@@ -58,15 +61,18 @@
       <main>
         <div>
           <p>Welcome</p>
-          <p>pls enter your username, or sign up!</p>
+          <p>pls enter your username</p>
         </div>
         <div>
-          <button>username</button>
-          <!-- wir können hier statt button einfach textfeld machen, damit man sofort schon existierende usename eintippt-->
+          <p>
+            <input type="text" id="tfUserName" name="tfUserName"/>
+            <input class = "btn btn-success" onclick="findUser()" value="Find"></input>
+          </p>
         </div>
         <div>
+          <p> or sign up!</p>
           <a href="create_user_screen.html">
-            <button class="btn btn-primary">Create user</button>
+            <inpot class="btn btn-primary">Create user</button>
           </a>
         </div>
         <p>we wish you a lot of fun and sucess!</p>
