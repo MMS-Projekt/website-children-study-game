@@ -33,7 +33,18 @@ window.setImageByUser = (image_url) => {
   window.image_url = image_url;
 };
 
+/**
+ * user logout
+ */
 window.logout = () => {
   window.user = null;
   window.image_url = null;
+};
+
+//const element = document.getElementById("id01");
+//element.innerHTML = "New Heading";
+window.getName = () => {
+  const element = document.getElementById("title");
+  element.innerHTML = "New Heading";
+  console.log("name");
 };
