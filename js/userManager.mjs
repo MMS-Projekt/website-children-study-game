@@ -1,8 +1,7 @@
 import { User } from "./user.mjs";
 
 //Global variables
-window.user;
-window.image_url = "";
+window.image_url;
 
 // Functions
 /**
@@ -10,8 +9,10 @@ window.image_url = "";
  */
 window.createUser = () => {
   const name = document.getElementById("tfUserName").value;
-  window.user = new User(name, window.image_url);
-  window.image_url = "";
+  localStorage.setItem(
+    "user",
+    JSON.stringify(new User(name, window.image_url))
+  );
   // in window.db save user
   window.location.href = "choice_of_games.html";
 };
@@ -22,6 +23,8 @@ window.createUser = () => {
 window.findUser = () => {
   const name = document.getElementById("tfUserName").value;
   //user = find in window.db
+  // save in localStorage
+  // if found -> game else -> create user
   window.location.href = "choice_of_games.html";
 };
 
@@ -36,15 +39,37 @@ window.setImageByUser = (image_url) => {
 /**
  * user logout
  */
-window.logout = () => {
-  window.user = null;
-  window.image_url = null;
+window.logoutUser = () => {
+  localStorage.removeItem("user");
 };
 
-//const element = document.getElementById("id01");
-//element.innerHTML = "New Heading";
+// get and set of user
 window.getName = () => {
-  const element = document.getElementById("title");
-  element.innerHTML = "New Heading";
-  console.log("name");
+  const user = JSON.parse(localStorage.getItem("user"));
+  return user.name;
+};
+
+window.getImage = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  return user.image_url;
+};
+
+window.getScoreMemory = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  return user.scoreByMemory;
+};
+
+window.getScoreGS = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  return user.scoreByGS;
+};
+
+window.setScoreMemory = (newScore) => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  user.scoreByMemory = newScore;
+};
+
+window.setScoreGS = (newScore) => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  user.scoreByGS = newScore;
 };

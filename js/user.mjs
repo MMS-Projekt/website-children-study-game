@@ -6,32 +6,4 @@ export class User {
       (this.scoreByMemory = 0),
       (this.scoreByGS = 0);
   }
-
-  getName() {
-    return this.name;
-  }
-
-  getScoreByMemory() {
-    return this.getSoreByMemory;
-  }
-
-  getScoreByGS() {
-    return this.scoreByGS;
-  }
-
-  getImageUrl() {
-    return this.image_url;
-  }
-
-  setScoreByMemory(newScore) {
-    this.scoreByMemory = newScore;
-  }
-
-  setScoreByGS(newScore) {
-    this.getScoreByGS = newScore;
-  }
-
-  setImageUrl(image_url) {
-    this.image_url = image_url;
-  }
 }

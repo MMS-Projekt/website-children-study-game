@@ -21,6 +21,7 @@
     <script type="module" src="/js/userManager.mjs"></script>
     <script type="module" src="/js/user.mjs"></script>
     <script type="module" src="/js/dbConfig.mjs"></script>
+    <script type="module" src="/js/userScreenConfig.mjs"></script>
     <title>User screen</title>
   </head>
   <body>
@@ -77,10 +78,10 @@
         <h1 id="title">Your acount</h1>
       </header>
       <main>
-        <p>Hello username mit Bild</p>
-        <p>Spiel 1 mit Score</p>
-        <p>Spiel 2 mit Score</p>
-       <a href="login_screen.html">Logout</a>
+        <p id="nameOfUser">NameOfUser</p>
+        <img id="imageOfUser" src="" alt="Your foto" class="img-circle" />
+        <p id="scoreOfMemory">0</p>
+        <p id="scoreOfGS">0</p>
       </main>
       <footer>
         <a href="about_us.html">about us</a>
