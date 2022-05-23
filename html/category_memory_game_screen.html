@@ -21,6 +21,7 @@
   <script type="module" src="/js/userManager.mjs"></script>
   <script type="module" src="/js/user.mjs"></script>
   <script type="module" src="/js/dbConfig.mjs"></script>
+  <script  src="/js/selectCategoryMemoryGame.js"></script>
   <title>Category Memory Game</title>
 </head>
 <body>
@@ -72,9 +73,43 @@
   <div class="container">
     <main>
         <h1>Choose the Category</h1>
-
-
     </main>
+    
+    <!--Man muss das gut platzieren-->
+        <div class="g-col">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="foto of animals">
+            <div class="card-body">
+              <h5 class="card-title">Animals</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button class="btn btn-primary" id="Animals" onclick="saveSelectedCategory(this.id);">Start</button>
+            </div>'
+          </div>
+        </div>
+        
+        
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="k2">
+            <div class="card-body">
+              <h5 class="card-title">K2</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button class="btn btn-primary" id="k2" onclick="saveSelectedCategory(this.id);">Start</button>
+            </div>
+          </div>
+       
+        
+        <div >
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="k3">
+            <div class="card-body">
+              <h5 class="card-title">K3</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <button class="btn btn-primary" id="k3" onclick="saveSelectedCategory(this.id);">Start</button>
+            </div>
+          </div>
+        </div>
+     
+    
     <footer>
         <a href="about_us.html">about us</a>
         <a href="private_policy.html">private policy</a>

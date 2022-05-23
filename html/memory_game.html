@@ -20,14 +20,14 @@
   <!--add main js-->
   <script type="module" src="/js/userManager.mjs"></script>
   <script type="module" src="/js/user.mjs"></script>
-  <script type="module" src="/js/dbConfig.mjs"></script>
+  <script type="module" src="/js/memoryGame.mjs"></script>
   <title>Memory Game</title>
 </head>
  <!--Navigation bar-->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand p-0" href="#">
-        <img src="imageHTML/CSG.png" alt="Children study game" width="90" />
+       
       </a>
       <button
         class="navbar-toggler"
@@ -72,11 +72,14 @@
 <body>
     <main>
         <h1>Find the right pairs!</h1>
+        
+        <div class="grid">
+        </div>
     </main>
     <footer>
         <div>
             <p>tries</p>
-            <p>score</p>
+            <p id="score">score: 0</p>
             <p>time</p>
         </div>
         
