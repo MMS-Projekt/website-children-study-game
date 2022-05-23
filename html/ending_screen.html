@@ -21,6 +21,7 @@
   <script type="module" src="/js/userManager.mjs"></script>
   <script type="module" src="/js/user.mjs"></script>
   <script type="module" src="/js/dbConfig.mjs"></script>
+  <script type="module" src="/js/endingScreenConfig.js"></script>
   <title>Ending screen</title>
 </head>
 <!--Navigation bar-->
@@ -71,11 +72,28 @@
   <div class="container">
 <body>
     <main>
-        <h1>You´r score</h1>
-        <p>You placed ...</p>
-        <h2>Top 5</h2>
-        <button>play again</button>
-        <a href="choice_of_games.html">choose other game</a>
+        <h1 id = "nameOfGame">Score of game</h1>
+        <h4 id="score">Your score</h4>
+        <h4 id="place">Your place</h4>
+        <br>
+
+        <div class="card" style="width: 30rem;">
+          <div class="card-header">
+            <h3>Top 5</h3>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li id="pl1" class="list-group-item">An item</li>
+            <li id="pl2" class="list-group-item">A second item</li>
+            <li id="pl3" class="list-group-item">A third item</li>
+            <li id="pl4" class="list-group-item">A second item</li>
+            <li id="pl5" class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <br>
+
+        <a href="memory_game.html" class="btn btn-info">play again</a>
+        OR
+        <a href="choice_of_games.html" class ="btn btn-success">choose other game</a>
     </main>
     <footer>
         <a href="about_us.html">about us</a>

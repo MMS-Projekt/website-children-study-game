@@ -1,3 +1,5 @@
+// this realizes manager of user object
+
 import { User } from "./user.mjs";
 
 //Global variables
@@ -13,7 +15,7 @@ window.createUser = () => {
     "user",
     JSON.stringify(new User(name, window.image_url))
   );
-  // in window.db save user
+  // TODO in window.db save user
   window.location.href = "choice_of_games.html";
 };
 

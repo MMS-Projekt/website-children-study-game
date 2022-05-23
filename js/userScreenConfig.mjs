@@ -1,3 +1,5 @@
+// this class configures page of user
+
 const nameOfUser = document.getElementById("nameOfUser");
 nameOfUser.innerText = "Hello " + window.getName();
 
