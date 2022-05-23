@@ -18,8 +18,8 @@
       crossorigin="anonymous"
     ></script>
     <!--add main js-->
-    <script type = "module" src="/js/userManager.mjs"></script>
-    <script type = "module" src="/js/user.mjs"></script>
+    <script type="module" src="/js/userManager.mjs"></script>
+    <script type="module" src="/js/user.mjs"></script>
     <script type="module" src="/js/dbConfig.mjs"></script>
     <title>Login screen</title>
   </head>
@@ -60,23 +60,35 @@
         <h1>Children study game</h1>
       </header>
       <main>
-        <div>
-          <p>Welcome</p>
-          <p>pls enter your username</p>
-        </div>
-        <div>
-          <p>
-            <input type="text" id="tfUserName" name="tfUserName"/>
-            <input class = "btn btn-success" onclick="findUser()" value="Find"></input>
-          </p>
-        </div>
-        <div>
-          <p> or sign up!</p>
-          <a href="create_user_screen.html">
-            <inpot class="btn btn-primary">Create user</button>
+        <div class="container-fluid">
+          <h3>Welcome</h3>
+          <br />
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              id="tfUserName"
+              class="form-control"
+              placeholder="pls enter your username"
+              aria-label="pls enter your username"
+              aria-describedby="button-addon2"
+              width="100"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+              onclick="findUser()"
+            >
+              Find
+            </button>
+          </div>
+
+          <h5>or sign up!</h5>
+          <a href="create_user_screen.html" class="btn btn-primary"
+            >Create user
           </a>
+          <p>we wish you a lot of fun and sucess!</p>
         </div>
-        <p>we wish you a lot of fun and sucess!</p>
       </main>
       <footer>
         <a href="about_us.html">about us</a>
