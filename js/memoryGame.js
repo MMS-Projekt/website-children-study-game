@@ -6,39 +6,271 @@ document.addEventListener("DOMContentLoaded", () => {
   const category = localStorage.getItem("categoryOfMemoryGame");
   let cardArray;
   if (category === "Animals") {
-    //array of animals
     cardArray = [
       {
-        name: "fries",
-        img: "/html/imageAccount/boy1.png",
+        name: "bird",
+        img: "/html/imageAnimals/bird.png",
       },
 
       {
-        name: "pizza",
-        img: "/html/imageAccount/boy2.png",
+        name: "cat",
+        img: "/html/imageAnimals/cat.png",
       },
 
       {
-        name: "fries",
-        img: "/html/imageAccount/boy1.png",
+        name: "cow",
+        img: "/html/imageAnimals/cow.png",
       },
 
       {
-        name: "pizza",
-        img: "/html/imageAccount/boy2.png",
+        name: "dog",
+        img: "/html/imageAnimals/dog.png",
+      },
+
+      {
+        name: "horse",
+        img: "/html/imageAnimals/horse.png",
+      },
+
+      {
+        name: "lion",
+        img: "/html/imageAnimals/lion.png",
+      },
+
+      {
+        name: "pig",
+        img: "/html/imageAnimals/pig.png",
+      },
+
+      {
+        name: "monkey",
+        img: "/html/imageAnimals/monkey.png",
+      },
+
+      {
+        name: "bird",
+        img: "/html/imageAnimals/bird.png",
+      },
+
+      {
+        name: "cat",
+        img: "/html/imageAnimals/cat.png",
+      },
+
+      {
+        name: "cow",
+        img: "/html/imageAnimals/cow.png",
+      },
+
+      {
+        name: "dog",
+        img: "/html/imageAnimals/dog.png",
+      },
+
+      {
+        name: "horse",
+        img: "/html/imageAnimals/horse.png",
+      },
+
+      {
+        name: "lion",
+        img: "/html/imageAnimals/lion.png",
+      },
+
+      {
+        name: "pig",
+        img: "/html/imageAnimals/pig.png",
+      },
+
+      {
+        name: "monkey",
+        img: "/html/imageAnimals/monkey.png",
       },
     ];
-  } else {
-    // other category
+  } else if (category === "Fruits") {
     cardArray = [
       {
-        name: "fries",
-        img: "/html/imageAccount/boy1.png",
+        name: "apple",
+        img: "/html/imageFruits/apple.png",
       },
 
       {
-        name: "pizza",
-        img: "/html/imageAccount/boy2.png",
+        name: "banana",
+        img: "/html/imageFruits/banana.png",
+      },
+
+      {
+        name: "cherry",
+        img: "/html/imageFruits/cherry.png",
+      },
+
+      {
+        name: "grape",
+        img: "/html/imageFruits/grape.png",
+      },
+
+      {
+        name: "lemon",
+        img: "/html/imageFruits/lemon.png",
+      },
+
+      {
+        name: "orange",
+        img: "/html/imageFruits/orange.png",
+      },
+
+      {
+        name: "strawberry",
+        img: "/html/imageFruits/strawberry.png",
+      },
+
+      {
+        name: "watermelon",
+        img: "/html/imageFruits/watermelon.png",
+      },
+
+      {
+        name: "apple",
+        img: "/html/imageFruits/apple.png",
+      },
+
+      {
+        name: "banana",
+        img: "/html/imageFruits/banana.png",
+      },
+
+      {
+        name: "cherry",
+        img: "/html/imageFruits/cherry.png",
+      },
+
+      {
+        name: "grape",
+        img: "/html/imageFruits/grape.png",
+      },
+
+      {
+        name: "lemon",
+        img: "/html/imageFruits/lemon.png",
+      },
+
+      {
+        name: "orange",
+        img: "/html/imageFruits/orange.png",
+      },
+
+      {
+        name: "strawberry",
+        img: "/html/imageFruits/strawberry.png",
+      },
+
+      {
+        name: "watermelon",
+        img: "/html/imageFruits/watermelon.png",
+      },
+    ];
+  } else if (category === "Cars") {
+    cardArray = [
+      {
+        name: "ambulance",
+        img: "/html/imageCars/ambulance.png",
+      },
+
+      {
+        name: "bus",
+        img: "/html/imageCars/bus.png",
+      },
+
+      {
+        name: "car_police",
+        img: "/html/imageCars/car_police.png",
+      },
+
+      {
+        name: "combine_farm",
+        img: "/html/imageCars/combine_farm.png",
+      },
+
+      {
+        name: "excavator",
+        img: "/html/imageCars/excavator.png",
+      },
+
+      {
+        name: "firetruck",
+        img: "/html/imageCars/firetruck.png",
+      },
+
+      {
+        name: "motorhome",
+        img: "/html/imageCars/motorhome.png",
+      },
+
+      {
+        name: "normal_car",
+        img: "/html/imageCars/normal_car.png",
+      },
+
+      {
+        name: "ambulance",
+        img: "/html/imageCars/ambulance.png",
+      },
+
+      {
+        name: "bus",
+        img: "/html/imageCars/bus.png",
+      },
+
+      {
+        name: "car_police",
+        img: "/html/imageCars/car_police.png",
+      },
+
+      {
+        name: "combine_farm",
+        img: "/html/imageCars/combine_farm.png",
+      },
+
+      {
+        name: "excavator",
+        img: "/html/imageCars/excavator.png",
+      },
+
+      {
+        name: "firetruck",
+        img: "/html/imageCars/firetruck.png",
+      },
+
+      {
+        name: "motorhome",
+        img: "/html/imageCars/motorhome.png",
+      },
+
+      {
+        name: "normal_car",
+        img: "/html/imageCars/normal_car.png",
+      },
+    ];
+  } else if (category === "Test") {
+    cardArray = [
+      {
+        name: "bird",
+        img: "/html/imageAnimals/bird.png",
+      },
+
+      {
+        name: "cat",
+        img: "/html/imageAnimals/cat.png",
+      },
+
+      {
+        name: "bird",
+        img: "/html/imageAnimals/bird.png",
+      },
+
+      {
+        name: "cat",
+        img: "/html/imageAnimals/cat.png",
       },
     ];
   }
