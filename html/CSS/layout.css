@@ -1,7 +1,7 @@
-/*Zum Anzeigen der Div-Umrandungen: */
+/*Zum Anzeigen der Div-Umrandungen: 
 div {
 border: 2px dashed #f5842e;
-}
+} */
 
 /*
 GRID LAYOUT:
@@ -50,9 +50,9 @@ GRID LAYOUT:
     position: relative;
     z-index: 1;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
 }
 
@@ -65,8 +65,8 @@ GRID LAYOUT:
     justify-content: space-evenly;
     align-items: center;
     background:
-    linear-gradient(rgba(2, 2, 2, 0.9), rgba(90, 90, 90, 0.75)),
-    url("/html/imageHTML/chess-2.jpg") fixed;
+    linear-gradient(rgba(6, 8, 22, 0.9), rgba(59, 40, 22, 0.75)),
+    url("/html/imageForGames/Animals.jpeg") fixed;
     background-size: cover;
     color: white;
 }
