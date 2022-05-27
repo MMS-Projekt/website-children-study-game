@@ -130,6 +130,9 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(playSound, 2000);
     } else {
       score = score - 100;
+      if (score < 0) {
+        score = 0;
+      }
       massege.innerText = "You have not found";
       sound.pause();
       setTimeout(playSound, 1000);
