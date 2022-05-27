@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/login-screen.css" />
+    <!--CSS -->
+    <link rel="stylesheet" href="CSS/stylesheet.css"/>
+    <link rel="stylesheet" href="CSS/layout.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"/>
+
     <!--add Bootstarp-->
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -60,7 +64,7 @@
                 <a
                   class="nav-link"
                   aria-current="page"
-                  href="login_screen.html"
+                  href="index.html"
                   onclick="logout()"
                   >Logout</a
                 >
@@ -69,19 +73,33 @@
           </div>
         </div>
       </nav>
-      <div class="container">
-    <main>  
-        <h1>Here you will find, how to contact us</h1>
-         <h2>via instagram</h2>
-        <p>unsere instagram links...</p>
-        <h2>via Email</h2>
-        <p>unsere Emails...</p>
-    </main>
-    <footer>
-        <a href="about_us.html">about us</a>
-        <a href="privacy_policy.html">privacy policy</a>
-        <a href="contact.html">contact</a>
-        <p>©2022 Children Study Game</p>
-      </footer> 
+
+  <div class="grid-container">
+        <div class="grid_section1">
+          <div class="box_headline">
+            <h1>Contact us</h1>
+          </div>
+
+          <div class="box_contact">
+            <h2>via instagram</h2>
+            <p>unsere instagram links...</p>
+            <h2>via Email</h2>
+            <p>unsere Emails...</p>    
+          </div>
+        </div> <!-- Ende grid_section1 -->
+        
+        <div class="grid_footer">
+          <div class="box_footer">
+            <a href="about_us.html">about us</a>
+            <a href="privacy_policy.html">private policy</a>
+            <a href="contact.html">contact</a>
+          </div>
+    
+          <div class="box_copyright">
+              <p>©2022 Children Study Game</p>
+          </div>
+        </div> <!-- Ende Footer -->
+    
+  </div> <!-- Ende grid-container -->
 </body>
 </html>

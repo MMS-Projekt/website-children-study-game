@@ -3,13 +3,13 @@ p {
 }
 
 h1 {
-    font-family: Lobster;
+    font-family: Righteous;
     font-size: 30px;
     letter-spacing: 1px;
 }
 
 h2 {
-    font-family: Arial Black;
+    font-family: Righteous;
     font-weight: bold;
 }
 
@@ -34,7 +34,7 @@ h3, h4, h5, h6 {
 
 }
 
-.box_search, .box_team {
+.box_search, .box_team, .box_contact {
     flex-grow: 1;
     text-align: center;
     padding-top: 20px;
@@ -44,13 +44,31 @@ h3, h4, h5, h6 {
     flex-grow: 100%;
 }
 
-.box_gamechoice1, .box_gamechoice2 {
+.box_gamechoice {
     flex-grow: 1;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 20px;
-    margin: 20px;
+    display: inline-flex;
+    flex-wrap: wrap;
 }
+
+.box_cardchoice {
+    width: 400px;
+    margin: 20px;
+    padding: 5px;
+    border: 5px solid;
+    border-radius: 15px;
+    border-color: rgb(161, 161, 161);
+    background-color: white;
+    color: black;
+}
+
+.box_cardchoice > img {
+    max-height: 350px;
+    align-content: center;
+}
+
 
 .box_games {
     display: inline-flex;
