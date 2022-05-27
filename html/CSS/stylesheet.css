@@ -47,7 +47,7 @@ h3, h4, h5, h6 {
 
 .box_gamechoice {
     flex-grow: 1;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     padding: 20px;
     display: inline-flex;
@@ -55,7 +55,7 @@ h3, h4, h5, h6 {
 }
 
 .box_cardchoice {
-    width: 400px;
+    width: 450px;
     margin: 20px;
     padding: 5px;
     border: 5px solid;
