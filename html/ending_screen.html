@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/login-screen.css" />
+    <!--CSS -->
+    <link rel="stylesheet" href="CSS/stylesheet.css"/>
+    <link rel="stylesheet" href="CSS/layout.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous"/>
+
     <!--add Bootstarp-->
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -24,82 +29,95 @@
   <script type="module" src="/js/endingScreenConfig.js"></script>
   <title>Ending screen</title>
 </head>
-<!--Navigation bar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand p-0" href="#">
-        <img src="imageHTML/CSG.png" alt="Children study game" width="90" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              aria-current="page"
-              href="choice_of_games.html"
-              >Games</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="user_screen.html"
-              >User</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              aria-current="page"
-              href="index.html"
-              onclick="logout()"
-              >Logout</a
-            >
-          </li>
+ <!--Navigation bar-->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand p-0" href="choice_of_games.html">
+      <h1 style="font-family: Righteous;">CSG</h1>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="choice_of_games.html"
+            >Games</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="user_screen.html"
+            >User</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            href="index.html"
+            onclick="logout()"
+            >Logout</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="grid-container">
+  <div class="grid_section1">
+    <div class="box_headline">
+      <h1 id = "nameOfGame">Score of game</h1>
+    </div>
+
+    <div class="box_results">
+      <h3 id="score">Your score</h3>
+      <h3 id="place">Your place</h3>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Top 5</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li id="pl1" class="list-group-item">An item</li>
+          <li id="pl2" class="list-group-item">A second item</li>
+          <li id="pl3" class="list-group-item">A third item</li>
+          <li id="pl4" class="list-group-item">A second item</li>
+          <li id="pl5" class="list-group-item">A third item</li>
         </ul>
       </div>
+      <br>
+      <button id="playAgain" class="btn btn-info" onclick="playAgain()">play again</button>
+      OR
+      <a href="choice_of_games.html" class ="btn btn-success">choose other game</a>
+      <br><br>
     </div>
-  </nav>
-  <div class="container">
-<body>
-    <main>
-        <h1 id = "nameOfGame">Score of game</h1>
-        <h4 id="score">Your score</h4>
-        <h4 id="place">Your place</h4>
-        <br>
+  </div> <!-- Ende grid_section1 -->
 
-        <div class="card" style="width: 30rem;">
-          <div class="card-header">
-            <h3>Top 5</h3>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li id="pl1" class="list-group-item">An item</li>
-            <li id="pl2" class="list-group-item">A second item</li>
-            <li id="pl3" class="list-group-item">A third item</li>
-            <li id="pl4" class="list-group-item">A second item</li>
-            <li id="pl5" class="list-group-item">A third item</li>
-          </ul>
-        </div>
-        <br>
+  <div class="grid_footer">
+    <div class="box_footer">
+      <a href="about_us.html">about us</a>
+      <a href="privacy_policy.html">private policy</a>
+      <a href="contact.html">contact</a>
+    </div>
 
-        <button id="playAgain" class="btn btn-info" onclick="playAgain()">play again</button>
-        OR
-        <a href="choice_of_games.html" class ="btn btn-success">choose other game</a>
-    </main>
-    <footer>
-        <a href="about_us.html">about us</a>
-        <a href="privacy_policy.html">privacy policy</a>
-        <a href="contact.html">contact</a>
+    <div class="box_copyright">
         <p>©2022 Children Study Game</p>
-      </footer>
+    </div>
+  </div> <!-- Ende Footer -->
+
+</div> <!-- Ende grid-container -->
 </body>
 </html>
