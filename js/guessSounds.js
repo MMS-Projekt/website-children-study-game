@@ -1,4 +1,5 @@
 // this class realizes guess sounds game
+
 document.addEventListener("DOMContentLoaded", () => {
   cardArray = [
     {
@@ -43,46 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   soundArray = [
-    {
-      name: "bird",
-      img: "/html/imageAnimals/bird.png",
-    },
-
-    {
-      name: "cat",
-      img: "/html/imageAnimals/cat.png",
-    },
-
-    {
-      name: "cow",
-      img: "/html/imageAnimals/cow.png",
-    },
-
-    {
-      name: "dog",
-      img: "/html/imageAnimals/dog.png",
-    },
-
-    {
-      name: "horse",
-      img: "/html/imageAnimals/horse.png",
-    },
-
-    {
-      name: "lion",
-      img: "/html/imageAnimals/lion.png",
-    },
-
-    {
-      name: "pig",
-      img: "/html/imageAnimals/pig.png",
-    },
-
-    {
-      name: "monkey",
-      img: "/html/imageAnimals/monkey.png",
-    },
-
     {
       name: "bird",
       img: "/html/imageAnimals/bird.png",
