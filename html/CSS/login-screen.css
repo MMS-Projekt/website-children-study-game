@@ -17,15 +17,16 @@ main{
 footer{
     background-color: black;
     text-align: center;
-    margin: 20px 0px;
-    padding: 20px 0;
+    margin: 0;
+    padding: 0;
 }
 
 footer a{
+    margin: 0;
     text-decoration: none;
     color: white;
     background-color: grey;
-    padding: 6px;
+    padding: 0px;
     border-top: 10px;
 }
 

@@ -1,0 +1,81 @@
+p {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1 {
+    font-family: Lobster;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: Arial Black;
+    font-weight: bold;
+}
+
+h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+
+/* LAYOUT BOX */
+
+/* SECTION 1 */
+.box_headline{
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    flex-basis: 100%;
+}
+
+.box_search{
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-grow: 100%;
+}
+
+.box_gamechoice1, .box_gamechoice2{
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.box_footer {
+    flex-grow: 1;
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: black;
+}
+
+.box_footer > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    margin: 0;
+}
+
+.box_footer > a:hover {
+    border-radius: 50px;
+    background-color: rgb(65, 65, 65);
+    color: white;
+}
+
+.box_copyright{
+    flex-grow: 1;
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 20px;
+}

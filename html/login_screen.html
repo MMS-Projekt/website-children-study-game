@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/login-screen.css" />
+
+    <!--CSS -->
+    <link rel="stylesheet" href="CSS/stylesheet.css"/>
+    <link rel="stylesheet" href="CSS/layout.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"/>
+
     <!--add Bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -23,6 +28,7 @@
     <script type="module" src="/js/dbConfig.mjs"></script>
     <title>Login screen</title>
   </head>
+
   <body>
     <!--Navigation bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -48,21 +54,24 @@
                 class="nav-link active"
                 aria-current="page"
                 href="login_screen.html"
-                >Children study game</a
+                >CHILDRED STUDY GAME</a
               >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="container">
-      <header>
-        <h1>Children study game</h1>
-      </header>
-      <main>
-        <div class="container-fluid">
-          <h3>Welcome</h3>
-          <br />
+
+  <div class="grid-container"> 
+
+    <div class="grid_section2">
+      <div class="box_search">
+
+        <h1 class="login_screen">Children Study Game</h1>
+        <hr>
+
+          <h2>Welcome</h2>
+          <br/>
           <div class="input-group mb-3">
             <input
               type="text"
@@ -77,27 +86,35 @@
               class="btn btn-outline-secondary"
               type="button"
               id="button-addon2"
-              onclick="findUser()"
-            >
+              onclick="findUser()">
               Find
             </button>
           </div>
-
+        
           <h5>or sign up!</h5>
           <a href="create_user_screen.html" class="btn btn-primary"
             >Create user
           </a>
-
-          <br />
+          <br/>
+          <br/>
           <h5>we wish you a lot of fun and sucess!</h5>
         </div>
-      </main>
-      <footer>
+    </div>
+
+    <div class="grid_footer">
+      <hr>
+      <div class="box_footer">
         <a href="about_us.html">about us</a>
         <a href="private_policy.html">private policy</a>
         <a href="contact.html">contact</a>
-        <p>copyright...</p>
-      </footer>
+      </div>
+
+      <div class="box_copyright">
+          <p>©2022 Children Study Game</p>
+      </div>
+      <hr>
     </div>
+
+  </div> <!-- ENDE grid-container -->
   </body>
 </html>
