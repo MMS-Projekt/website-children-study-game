@@ -1,7 +1,7 @@
 // this class realizes guess sounds game
+
 document.addEventListener("DOMContentLoaded", () => {
-    let cardArray;
-  cardArray = [
+  let cardArray = [
     {
       name: "bird",
       img: "/html/imageAnimals/bird.png",
@@ -43,47 +43,46 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  soundArray = [
+  let soundArray = [
     {
       name: "bird",
-      img: "/html/AnimalSound/bird.wav",
+      sound: "/html/AnimalSound/bird.wav",
     },
 
     {
       name: "cat",
-      img: "/html/AnimalSound/cat.wav",
+      sound: "/html/AnimalSound/cat.wav",
     },
 
     {
       name: "cow",
-      img: "/html/AnimalSound/cow.wav",
+      sound: "/html/AnimalSound/cow.wav",
     },
 
     {
       name: "dog",
-      img: "/html/AnimalSound/dog.wav",
+      sound: "/html/AnimalSound/dog.wav",
     },
 
     {
       name: "horse",
-      img: "/html/AnimalSound/horse.wav",
+      sound: "/html/AnimalSound/horse.wav",
     },
 
     {
       name: "lion",
-      img: "/html/AnimalSound/lion.wav",
+      sound: "/html/AnimalSound/lion.wav",
     },
 
     {
       name: "pig",
-      img: "/html/AnimalSound/pig.wav",
+      sound: "/html/AnimalSound/pig.wav",
     },
 
     {
       name: "monkey",
-      img: "/html/AnimalSound/monkey.wav",
+      sound: "/html/AnimalSound/monkey.wav",
     },
-
   ];
 
   soundArray.sort(() => 0.5 - Math.random());
@@ -91,6 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector(".grid");
   const resultDisplay = document.getElementById("score");
   const massege = document.querySelector("h2");
+  const playBtn = document.getElementById("playBtn");
+  playBtn.addEventListener("click", playSound);
+
+  let soundID = 0;
+  let sound = new Audio();
 
   let score = 0; // TODO score richtig berechnen
 
@@ -109,23 +113,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function matchCard() {
-    massege.innerHTML =
-    "You have to find the matching animal for this sound";
+    //const cards = document.querySelectorAll("img");
+
     let cardId = this.getAttribute("data-id");
-    cardsChosen.push(cardArray[cardId].name);
-    cardsChosenId.push(cardId);
-    this.setAttribute("src", cardArray[cardId].img);
-    if (cardsChosen.length === 2) {
-        setTimeout(checkForMatch, 500);
+    const card = cardArray[cardId].name;
+
+    if (card === soundArray[soundID].name) {
+      //cards[cardId].removeEventListener("click", matchCard);
+      massege.innerText = "You have found";
+      sound.pause();
+      nextSound();
+      setTimeout(playSound, 1000);
+    } else {
+      massege.innerText = "You have not found";
+      setTimeout(playSound, 1000);
     }
   }
 
-  /**
-   * goes to score screen
-   */
-   function goToEndingScreen() {
-    window.location.href = "ending_screen.html";
+  function nextSound() {
+    if (soundID < soundArray.length) {
+      soundID++;
+    } else {
+      massege.innerText = "You have done";
+    }
+  }
+  function playSound() {
+    const src = soundArray[soundID].sound;
+    sound = new Audio(src);
+    sound.play();
   }
 
   createBoard();
+  setTimeout(playSound, 1000);
 });
