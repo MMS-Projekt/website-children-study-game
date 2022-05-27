@@ -17,19 +17,24 @@ h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-
 /* LAYOUT BOX */
 
 /* SECTION 1 */
 .box_headline{
     flex-grow: 1;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     flex-basis: 100%;
+    background:
+    linear-gradient(rgba(6, 8, 22, 0.9), rgba(59, 40, 22, 0.75)),
+    url("/html/imageForGames/Animals.jpeg") fixed;
+    background-size: cover;
+    color: white;
+
 }
 
-.box_search{
+.box_search, .box_team {
     flex-grow: 1;
     text-align: center;
     padding-top: 20px;
@@ -39,13 +44,37 @@ h3, h4, h5, h6 {
     flex-grow: 100%;
 }
 
-.box_gamechoice1, .box_gamechoice2{
+.box_gamechoice1, .box_gamechoice2 {
     flex-grow: 1;
     align-items: center;
     justify-content: center;
     padding: 20px;
     margin: 20px;
 }
+
+.box_games {
+    display: inline-flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 5px;
+}
+
+.box_card {
+    width: 280px;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 5px solid;
+    border-radius: 15px;
+    border-color: rgb(161, 161, 161);
+}
+
+.box_card > img {
+    height: 230px;
+    align-content: center;
+}
+
 
 .box_footer {
     flex-grow: 1;
@@ -55,22 +84,22 @@ h3, h4, h5, h6 {
     padding-bottom: 20px;
     border-top: 2px solid;
     border-bottom: 2px solid;
-    border-color: black;
+    border-color: rgb(209, 209, 209);
 }
 
 .box_footer > a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 20px;
-    padding: 15px;
+    font-size: 18px;
+    padding: 10px;
     margin: 0;
 }
 
 .box_footer > a:hover {
-    border-radius: 50px;
-    background-color: rgb(65, 65, 65);
-    color: white;
+    border-radius: 15px;
+    background-color: rgb(209, 209, 209);
+    color: rgb(62, 62, 62);
 }
 
 .box_copyright{
