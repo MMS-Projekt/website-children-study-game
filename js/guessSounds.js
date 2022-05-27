@@ -1,6 +1,6 @@
 // this class realizes guess sounds game
-
 document.addEventListener("DOMContentLoaded", () => {
+    let cardArray;
   cardArray = [
     {
       name: "bird",
@@ -46,43 +46,44 @@ document.addEventListener("DOMContentLoaded", () => {
   soundArray = [
     {
       name: "bird",
-      img: "/html/imageAnimals/bird.png",
+      img: "/html/AnimalSound/bird.wav",
     },
 
     {
       name: "cat",
-      img: "/html/imageAnimals/cat.png",
+      img: "/html/AnimalSound/cat.wav",
     },
 
     {
       name: "cow",
-      img: "/html/imageAnimals/cow.png",
+      img: "/html/AnimalSound/cow.wav",
     },
 
     {
       name: "dog",
-      img: "/html/imageAnimals/dog.png",
+      img: "/html/AnimalSound/dog.wav",
     },
 
     {
       name: "horse",
-      img: "/html/imageAnimals/horse.png",
+      img: "/html/AnimalSound/horse.wav",
     },
 
     {
       name: "lion",
-      img: "/html/imageAnimals/lion.png",
+      img: "/html/AnimalSound/lion.wav",
     },
 
     {
       name: "pig",
-      img: "/html/imageAnimals/pig.png",
+      img: "/html/AnimalSound/pig.wav",
     },
 
     {
       name: "monkey",
-      img: "/html/imageAnimals/monkey.png",
+      img: "/html/AnimalSound/monkey.wav",
     },
+
   ];
 
   soundArray.sort(() => 0.5 - Math.random());
@@ -107,7 +108,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function matchCard() {}
+  function matchCard() {
+    massege.innerHTML =
+    "You have to find the matching animal for this sound";
+    let cardId = this.getAttribute("data-id");
+    cardsChosen.push(cardArray[cardId].name);
+    cardsChosenId.push(cardId);
+    this.setAttribute("src", cardArray[cardId].img);
+    if (cardsChosen.length === 2) {
+        setTimeout(checkForMatch, 500);
+    }
+  }
+
+  /**
+   * goes to score screen
+   */
+   function goToEndingScreen() {
+    window.location.href = "ending_screen.html";
+  }
 
   createBoard();
 });
