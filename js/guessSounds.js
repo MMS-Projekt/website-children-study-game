@@ -92,11 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const massege = document.querySelector("h2");
   const playBtn = document.getElementById("playBtn");
   playBtn.addEventListener("click", playSound);
+  const infoMassege = document.getElementById("info");
 
   let soundID = 0;
   let sound = new Audio();
 
-  let score = 0; // TODO score richtig berechnen
+  let score = 0;
 
   /**
    *  create your board
@@ -112,37 +113,82 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  /**
+   * check if card matches with sound
+   */
   function matchCard() {
-    //const cards = document.querySelectorAll("img");
-
     let cardId = this.getAttribute("data-id");
     const card = cardArray[cardId].name;
 
     if (card === soundArray[soundID].name) {
-      //cards[cardId].removeEventListener("click", matchCard);
+      score = score + 100;
       massege.innerText = "You have found";
       sound.pause();
       nextSound();
-      setTimeout(playSound, 1000);
+      toInformUser();
+      isFinished();
+      setTimeout(playSound, 2000);
     } else {
+      score = score - 100;
       massege.innerText = "You have not found";
+      sound.pause();
       setTimeout(playSound, 1000);
+      toInformUser();
     }
   }
 
+  function isFinished() {
+    if (soundID === soundArray.length) {
+      massege.innerText = "You have done";
+      finish();
+    }
+  }
+
+  /**
+   * gets next id of sound to play, if all sounds ware played use have done game
+   */
   function nextSound() {
     if (soundID < soundArray.length) {
       soundID++;
-    } else {
-      massege.innerText = "You have done";
     }
   }
+  /**
+   * gets how many sounds are to guess
+   */
+  function toInformUser() {
+    infoMassege.innerText =
+      "You have to guess " + (soundArray.length - soundID) + " sounds";
+  }
+
+  /**
+   * goes to next html ans save info in localStorage
+   */
+  function finish() {
+    localStorage.setItem("score", score); // save score in localStorage
+    localStorage.setItem("nameOfGame", "Guess sounds"); // save name of game in localStorage
+
+    setTimeout(goToEndingScreen, 4000);
+  }
+
+  /**
+   * play sound
+   */
   function playSound() {
-    const src = soundArray[soundID].sound;
-    sound = new Audio(src);
-    sound.play();
+    if (soundID < soundArray.length) {
+      const src = soundArray[soundID].sound;
+      sound = new Audio(src);
+      sound.play();
+    }
+  }
+
+  /**
+   * goes to score screen
+   */
+  function goToEndingScreen() {
+    window.location.href = "ending_screen.html";
   }
 
   createBoard();
-  setTimeout(playSound, 1000);
+  toInformUser();
+  setTimeout(playSound, 2000);
 });
