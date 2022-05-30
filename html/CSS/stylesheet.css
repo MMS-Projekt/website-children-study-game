@@ -35,14 +35,26 @@ h3, h4, h5, h6 {
 
 }
 
-.box_search, .box_team, .box_contact, .box_registration, .box_results, .box_game, .box_policy, .box_account {
+.box_search, .box_team, .box_contact, .box_registration, .box_results, .box_policy, .box_account {
     flex-grow: 1;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    flex-grow: 100%;
+    flex-basis: 100%;
+}
+
+.box_game {
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-basis: 100%;
+
+    max-width: 1000px;
 }
 
 .box_gamechoice {
@@ -96,10 +108,10 @@ h3, h4, h5, h6 {
 
 .box_score {
     flex-grow: 1;
+    flex-basis: 100%;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    flex-grow: 100%;
     font-size: 20px;
     font-weight: bolder;
 }

@@ -1,7 +1,7 @@
-/*Zum Anzeigen der Div-Umrandungen:
+/*Zum Anzeigen der Div-Umrandungen: */
 div {
 border: 2px dashed #f5842e;
-} */
+}
 
 /*
 GRID LAYOUT:
@@ -24,8 +24,7 @@ GRID LAYOUT:
         'section4'
         'footer';
     column-gap: 0px;
-    padding: 0%;
-
+    padding: 0px;
 }
 
 
@@ -69,16 +68,6 @@ GRID LAYOUT:
     url("/html/imageForGames/Animals.jpeg") fixed;
     background-size: cover;
     color: white;
-}
-
-.grid_section2 {grid-area: section2;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: flex-start;
 }
 
 .grid_section3 {grid-area: section3;
