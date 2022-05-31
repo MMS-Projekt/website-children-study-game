@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let soundID = 0;
   let sound = new Audio();
 
-  let score = 0;
+  let score = 100;
 
   /**
    *  create your board
@@ -121,15 +121,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const card = cardArray[cardId].name;
 
     if (card === soundArray[soundID].name) {
-      score = score + 100;
       massege.innerText = "You have found";
       sound.pause();
       nextSound();
       toInformUser();
       isFinished();
       setTimeout(playSound, 2000);
+      score += 10;
     } else {
-      score = score - 100;
+      score = score - 5;
       if (score < 0) {
         score = 0;
       }
@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(playSound, 1000);
       toInformUser();
     }
+    resultDisplay.innerText = "score: " + score;
   }
 
   function isFinished() {
@@ -167,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * goes to next html ans save info in localStorage
    */
   function finish() {
-    localStorage.setItem("score", score); // save score in localStorage
+    localStorage.setItem("scoreGS", score); // save score in localStorage
     localStorage.setItem("nameOfGame", "Guess sounds"); // save name of game in localStorage
 
     setTimeout(goToEndingScreen, 4000);

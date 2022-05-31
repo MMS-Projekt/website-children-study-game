@@ -57,13 +57,19 @@ window.getImage = () => {
 };
 
 window.getScoreMemory = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
-  return user.scoreByMemory;
+  const score = localStorage.getItem("scoreMemory");
+  if (score === null) {
+    return "0";
+  }
+  return score;
 };
 
 window.getScoreGS = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
-  return user.scoreByGS;
+  const score = localStorage.getItem("scoreGS");
+  if (score === null) {
+    return "0";
+  }
+  return score;
 };
 
 window.setScoreMemory = (newScore) => {

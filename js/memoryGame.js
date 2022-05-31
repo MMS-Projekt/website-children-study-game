@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultDisplay = document.getElementById("score");
   const massege = document.querySelector("h2");
 
-  let score = 0; // TODO score richtig berechnen
+  let score = 100;
 
   let cardsChosen = [];
   let cardsChosenId = [];
@@ -323,8 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
       massege.innerHTML = "You have clicked the same image &#128528;";
     } else if (cardsChosen[0] === cardsChosen[1]) {
       massege.innerHTML = "You found a match &#128522; &#128526;";
-      // TODO brechnen score
-      score = score + 5;
+      score = score + 10;
       cards[optionOneId].removeEventListener("click", flipCard);
       cards[optionTwoId].removeEventListener("click", flipCard);
       cardsWon.push(cardsChosen);
@@ -338,14 +337,15 @@ document.addEventListener("DOMContentLoaded", () => {
         "/html/imageForGames/white_square.png"
       );
       massege.innerHTML = "Wrong pair &#128524;";
+      score -= 5;
     }
     cardsChosen = [];
     cardsChosenId = [];
-    resultDisplay.innerHTML = "score: " + score;
+    resultDisplay.innerText = "score: " + score;
 
     if (cardsWon.length === cardArray.length / 2) {
       //user won
-      localStorage.setItem("score", score); // save score in localStorage
+      localStorage.setItem("scoreMemory", score); // save score in localStorage
       localStorage.setItem("nameOfGame", "Memory game"); // save name of game in localStorage
 
       massege.innerHTML = "you've done &#128077;";
