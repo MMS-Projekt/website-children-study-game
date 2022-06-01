@@ -41,8 +41,11 @@ window.setImageByUser = (image_url) => {
 /**
  * user logout
  */
-window.logoutUser = () => {
+window.logout = () => {
   localStorage.removeItem("user");
+  localStorage.setItem("scoreGS", 0);
+  localStorage.setItem("scoreMemory", 0);
+  localStorage.setItem("nameOfGame", "");
 };
 
 // get and set of user
