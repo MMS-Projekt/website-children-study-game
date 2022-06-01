@@ -32,7 +32,7 @@ window.calculGrade = () => {
   } else if (score < 165) {
     grade.innerHTML = "Good job! &#128522;";
   } else {
-    grade.innerHTML = "Perfect &#128526;";
+    grade.innerHTML = "Perfect! &#128526;";
   }
 };
 
